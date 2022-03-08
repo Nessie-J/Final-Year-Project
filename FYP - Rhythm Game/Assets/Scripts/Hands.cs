@@ -7,9 +7,7 @@ public class Hands : MonoBehaviour
     public InputDevice device;
     public InputDeviceCharacteristics controllerCharacteristics;
 
-    public Material touchingMaterial;
-    public Material notTouchingMaterial;
-    private GameObject currentlyTouching;
+    public LayerMask BlockLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -48,15 +46,5 @@ public class Hands : MonoBehaviour
 
 
         }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-     
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        
     }
 }

@@ -60,7 +60,7 @@
     <Compile Include="Assets\Scripts\Hands.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Obsticals.cs" />
-    <Compile Include="Assets\Scripts\InputController.cs" />
+    <Compile Include="Assets\Scripts\Collision.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
