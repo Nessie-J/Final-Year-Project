@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obsticals : Blocks
+namespace SpawnedObjects
 {
-   
+    public class Obsticals : Blocks
+    {
+
+    }
 }

@@ -58,9 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Blocks.cs" />
     <Compile Include="Assets\Scripts\Hands.cs" />
+    <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Obsticals.cs" />
-    <Compile Include="Assets\Scripts\Collision.cs" />
+    <Compile Include="Assets\Scripts\GameTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
