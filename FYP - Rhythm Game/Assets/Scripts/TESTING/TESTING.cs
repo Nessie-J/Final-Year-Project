@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Score;
+using UnityEngine;
 
 public class TESTING : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class TESTING : MonoBehaviour
         Score.MissCounter++;
     }
 
-   
+
 
 
 }

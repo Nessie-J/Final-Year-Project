@@ -1,7 +1,8 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Score;
+
 
 public class Collision : MonoBehaviour
 {
@@ -25,5 +26,7 @@ public class Collision : MonoBehaviour
 
         Debug.Log(debugStatementCol);
     }
+
+    
 }
 

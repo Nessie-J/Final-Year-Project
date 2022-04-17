@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-namespace controller {
+namespace controller
+{
     public class Hands : MonoBehaviour
     {
         public InputDevice device;

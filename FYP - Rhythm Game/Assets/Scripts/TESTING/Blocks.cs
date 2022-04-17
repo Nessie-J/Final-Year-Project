@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Score;
+using UnityEngine;
 
-namespace SpawnedObjects {
+namespace SpawnedObjects
+{
     public class Blocks : MonoBehaviour
     {
         [Header("Layer Masks")]
@@ -12,7 +11,7 @@ namespace SpawnedObjects {
 
         public PointsCounter PointsCounter;
         public Rigidbody rb;
-        
+
         [Header("Movement")]
         public float moveSpeed = 2;
 
@@ -30,8 +29,8 @@ namespace SpawnedObjects {
         // Update is called once per frame
         void Update()
         {
-           // transform.position += Time.deltaTime * transform.forward * moveSpeed;
-           
+            // transform.position += Time.deltaTime * transform.forward * moveSpeed;
+
 
             rb.AddForce(Time.deltaTime * transform.forward * moveSpeed);
         }
@@ -41,16 +40,16 @@ namespace SpawnedObjects {
 
             if ((wallLayer.value & (1 << other.gameObject.layer)) > 0)
             {
-               // currentPointValue += pointIncreaseValue;
+                // currentPointValue += pointIncreaseValue;
                 Debug.Log(currentPointValue + "hitting wall");
-                
+
             }
 
             else
             {
                 Debug.Log("MEH");
             }
-           
+
         }
 
         private void OnCollisionEnter(UnityEngine.Collision collision)
@@ -64,11 +63,11 @@ namespace SpawnedObjects {
             {
 
             }
-           
+
 
         }
 
-        protected virtual  void Missed()
+        protected virtual void Missed()
         {
             //If reach x point - Destory - +1 To miss counter
 
@@ -76,7 +75,7 @@ namespace SpawnedObjects {
             PointsCounter.ComboMultiplyer = 0;
         }
 
-       protected virtual void Destory()
+        protected virtual void Destory()
         {
 
         }

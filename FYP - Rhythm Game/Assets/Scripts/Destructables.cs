@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Score;
 
 public class Destructables : Obstacles
 {
@@ -10,7 +7,7 @@ public class Destructables : Obstacles
     {
         if ((wallLayer.value & (1 << other.gameObject.layer)) > 0)
         {
-            
+
             pointCounter.Score += currentPointValue;
             Debug.Log(currentPointValue + " hitting wall");
 

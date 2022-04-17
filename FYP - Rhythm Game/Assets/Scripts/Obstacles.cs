@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Score;
+using System.Collections;
+using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
@@ -37,14 +36,14 @@ public class Obstacles : MonoBehaviour
         rigiBod.AddForce(Time.deltaTime * transform.forward * movementSpeed);
     }
 
-   protected virtual void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
 
         if ((wallLayer.value & (1 << other.gameObject.layer)) > 0)
         {
-           
+
             Debug.Log(currentPointValue + "hitting wall");
-            
+
 
         }
         // If miss wall is hit 
@@ -64,7 +63,8 @@ public class Obstacles : MonoBehaviour
 
     protected virtual void Missed()
     {
-      //  currentpoint value add to score
+        //  currentpoint value add to score
+
     }
 
 
@@ -74,7 +74,7 @@ public class Obstacles : MonoBehaviour
         Destory();
     }
 
- 
+
 
 
 }

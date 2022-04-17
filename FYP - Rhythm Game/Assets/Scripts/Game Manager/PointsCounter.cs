@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Score {
+namespace Score
+{
     public class PointsCounter : MonoBehaviour
     {
         public float Score;
