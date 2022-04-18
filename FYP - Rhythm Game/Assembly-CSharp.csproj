@@ -57,18 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TESTING\Blocks.cs" />
-    <Compile Include="Assets\Scripts\InGameTimer.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\Timers\BeatTimer.cs" />
     <Compile Include="Assets\Scripts\Player\Hands.cs" />
-    <Compile Include="Assets\Scripts\Destructables.cs" />
     <Compile Include="Assets\Scripts\TESTING\GameTimer.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\Timers\PhaseTimer.cs" />
     <Compile Include="Assets\Scripts\TESTING\TESTING.cs" />
-    <Compile Include="Assets\Scripts\Game Manager\PointsCounter.cs" />
-    <Compile Include="Assets\Scripts\Collision.cs" />
-    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\Score\PointsCounter.cs" />
+    <Compile Include="Assets\Scripts\Player\Collision.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
     <Compile Include="Assets\Scripts\TESTING\Obsticals.cs" />
-    <Compile Include="Assets\Scripts\Obstacles.cs" />
-    <Compile Include="Assets\Scripts\BeatTimer.cs" />
-    <Compile Include="Assets\Scripts\PhaseTimer.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\SetPositions.cs" />
+    <Compile Include="Assets\Scripts\Player\ControllersCollision.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Destructable.cs" />
+    <Compile Include="Assets\Scripts\Spawning\SpawnObjectBase.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\PointWall.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI\PointsUI.cs" />
+    <Compile Include="Assets\Scripts\GameStates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

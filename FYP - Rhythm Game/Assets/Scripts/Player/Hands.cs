@@ -9,7 +9,7 @@ namespace controller
         public InputDevice device;
         public InputDeviceCharacteristics controllerCharacteristics;
 
-        public LayerMask BlockLayer;
+       
 
         // Start is called before the first frame update
         void Start()

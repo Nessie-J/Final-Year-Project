@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 6773038910631574822}
   - component: {fileID: 8651267171723325713}
   - component: {fileID: 1775509700959067494}
-  - component: {fileID: 1222831793601015316}
   - component: {fileID: 4987549304099409671}
-  - component: {fileID: -2555196255421620886}
+  - component: {fileID: 345628871558144821}
   m_Layer: 7
   m_Name: Cube 1
   m_TagString: Untagged
@@ -98,30 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1222831793601015316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987549304099409668}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49307fe29060b044487eac3f4fd34252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  PointsCounter: {fileID: 0}
-  rb: {fileID: 0}
-  moveSpeed: 20
-  basePointValue: 0
-  pointIncreaseValue: 10
-  currentPointValue: 0
 --- !u!54 &4987549304099409671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &-2555196255421620886
+--- !u!114 &345628871558144821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,19 +122,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 4987549304099409668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6598fc1677e39344a89501dcee6efe26, type: 3}
+  m_Script: {fileID: 11500000, guid: 33f05d833ba03794d870aeec1a583588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLayer:
+  handsLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  headLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallLayer:
+  scoreWallLayer:
     serializedVersion: 2
     m_Bits: 1024
-  movementSpeed: 5
-  destoryTimer: 200
+  missWallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  movementSpeed: 30
+  baseScoreValue: 50
+  currentPointValue: 50
+  rigiBod: {fileID: 0}
+  pointWall: {fileID: 0}
   pointCounter: {fileID: 0}
-  baseScoreValue: 0
-  pointIncreaseValue: 50
-  currentPointValue: 0
-  rigiBod: {fileID: 4987549304099409671}
