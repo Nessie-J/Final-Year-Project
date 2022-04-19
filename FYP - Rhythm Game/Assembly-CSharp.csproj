@@ -56,25 +56,31 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Game Manager\Settings\CustomControllers.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\TESTING\Blocks.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Timers\BeatTimer.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Player\Hands.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\GameStates.cs" />
     <Compile Include="Assets\Scripts\TESTING\GameTimer.cs" />
+    <Compile Include="Assets\Scripts\PlayerSettings.cs" />
+    <Compile Include="Assets\Scripts\PointWall.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Timers\PhaseTimer.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\SceneMan.cs" />
+    <Compile Include="Assets\Scripts\Spawning\Destructable.cs" />
+    <Compile Include="Assets\Scripts\Spawning\SpawnObjectBase.cs" />
+    <Compile Include="Assets\Scripts\UI\PointsUI.cs" />
+    <Compile Include="Assets\Scripts\Game Manager\Settings\SetPositions.cs" />
     <Compile Include="Assets\Scripts\TESTING\TESTING.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Score\PointsCounter.cs" />
     <Compile Include="Assets\Scripts\Player\Collision.cs" />
     <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
-    <Compile Include="Assets\Scripts\TESTING\Obsticals.cs" />
-    <Compile Include="Assets\Scripts\Game Manager\SetPositions.cs" />
     <Compile Include="Assets\Scripts\Player\ControllersCollision.cs" />
-    <Compile Include="Assets\Scripts\Spawning\Destructable.cs" />
-    <Compile Include="Assets\Scripts\Spawning\SpawnObjectBase.cs" />
-    <Compile Include="Assets\Scripts\Spawning\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\PointWall.cs" />
-    <Compile Include="Assets\Scripts\Game Manager\UIManager.cs" />
-    <Compile Include="Assets\Scripts\UI\PointsUI.cs" />
-    <Compile Include="Assets\Scripts\GameStates.cs" />
+    <Compile Include="Assets\Scripts\TESTING\Obsticals.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\RayCasting.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
