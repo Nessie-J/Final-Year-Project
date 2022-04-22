@@ -11,19 +11,22 @@ namespace GameManager {
         public string Game;
         // Start is called before the first frame update
 
-        void LoadMainMenu()
+        public void LoadMainMenu()
         {
             SceneManager.LoadScene(mainMenu);
+            Debug.Log("Main Menu");
         }
 
-        void LoadGame()
+       public void LoadGame()
         {
             SceneManager.LoadScene(Game);
+            Debug.Log("Game");
         }
 
-        void Quit()
+       public void Quit()
         {
             Application.Quit();
+            Debug.Log("Quit");
         }
     }
 }

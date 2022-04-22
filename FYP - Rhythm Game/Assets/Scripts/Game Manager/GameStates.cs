@@ -34,8 +34,6 @@ namespace GameManager {
         private void Update()
         {
 
-            paused();
-
             if (pointCounter.MissCounter >= maxMissAmount)
             {
                 //GAME OVER - give options to return to main menu or quit
@@ -51,17 +49,19 @@ namespace GameManager {
             }
         }
 
-        private void paused()
-        {
-            if (isPaused)
-            {
-                Time.timeScale = 0;
-            }
 
-            else
-            {
-                Time.timeScale = 1;
-            }
+        public void pauseGame()
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+            
+        }
+
+        public void resumeGame()
+        {
+            isPaused = false;
+            Time.timeScale = 1;
+          
         }
     }
 }

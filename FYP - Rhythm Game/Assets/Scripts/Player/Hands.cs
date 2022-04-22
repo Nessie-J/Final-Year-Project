@@ -12,33 +12,11 @@ namespace controller
         public InputDeviceCharacteristics controllerCharacteristics;
         public List<InputDevice> devices = new List<InputDevice>();
 
-        [Header("TESTING")]
-        public bool isRayCast;
-        public RayCasting rayCasting;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            rayCasting = GetComponentInChildren<RayCasting>();
-        }
 
         // Update is called once per frame
         void Update()
         {
             GetDevices();
-
-            if (isRayCast)
-            {
-                rayCasting.gameObject.SetActive(true);
-               
-            }
-
-            else
-            {
-                rayCasting.gameObject.SetActive(false);
-                return;
-            }
-          
         }
 
        public void GetDevices()
