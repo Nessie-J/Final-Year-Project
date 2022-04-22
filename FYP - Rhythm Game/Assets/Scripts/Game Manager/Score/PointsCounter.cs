@@ -5,7 +5,7 @@ namespace Score
     public class PointsCounter : MonoBehaviour
     {
         [Header("Final Score")]
-        public float Score;
+        public int Score;
 
         [Header("Point Variables")]
         public int PointAmount;
@@ -14,12 +14,23 @@ namespace Score
         [Header("Miss Counter")]
         public int MissCounter;
 
+        [Header("Points UI")]
+        public PointsUI pointsUI;
+
 
         private void Start()
         {
             Score = 0;
             ComboMultiplyer = 0;
             MissCounter = 0;
+
+            
+        }
+
+        private void Update()
+        {
+            
+            updateHighScore();
         }
 
         public void addPoints()
@@ -60,6 +71,20 @@ namespace Score
                 MissCounter--;
             }
             
+        }
+
+        public void updateHighScore()
+        {
+            if (Score > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", Score);
+                pointsUI.highScoreText.text = Score.ToString();
+            }
+        }
+
+        public void buttonTest()
+        {
+            Score += Random.Range(1, 9);
         }
     }
 }
