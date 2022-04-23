@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerSettings.cs" />
     <Compile Include="Assets\Scripts\PointWall.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Timers\PhaseTimer.cs" />
+    <Compile Include="Assets\Scripts\Customise.cs" />
     <Compile Include="Assets\Scripts\RayCasting.cs" />
     <Compile Include="Assets\Scripts\Spawning\Obstacle.cs" />
     <Compile Include="Assets\Scripts\SceneMan.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Spawning\Destructable.cs" />
     <Compile Include="Assets\Scripts\Spawning\SpawnObjectBase.cs" />
     <Compile Include="Assets\Scripts\UI\PointsUI.cs" />
+    <Compile Include="Assets\Scripts\SkinManager.cs" />
     <Compile Include="Assets\Scripts\Buttons.cs" />
     <Compile Include="Assets\Scripts\Game Manager\Settings\SetPositions.cs" />
     <Compile Include="Assets\Scripts\TESTING\TESTING.cs" />
@@ -83,6 +85,10 @@
     <Compile Include="Assets\Scripts\Player\ControllersCollision.cs" />
     <Compile Include="Assets\Scripts\TESTING\Obsticals.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\HandsCustom.cs" />
+    <Compile Include="Assets\Scripts\test.cs" />
+    <Compile Include="Assets\Scripts\Unlockables.cs" />
+    <Compile Include="Assets\Scripts\DontDestory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

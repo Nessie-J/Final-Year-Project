@@ -14,7 +14,10 @@ namespace spawnedObject {
                 pointCounter.addComboMutli();
                 pointCounter.addPoints();
                 pointCounter.removeMissCounter();
-                
+
+                unlockables.dodgeObjectCounter++;
+
+
             }
 
             base.OnTriggerEnter(other);

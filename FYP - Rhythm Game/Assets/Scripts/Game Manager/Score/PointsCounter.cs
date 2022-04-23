@@ -14,8 +14,9 @@ namespace Score
         [Header("Miss Counter")]
         public int MissCounter;
 
-        [Header("Points UI")]
+        [Header("Classes")]
         public PointsUI pointsUI;
+        public Unlockables unlockables;
 
 
         private void Start()
@@ -23,6 +24,8 @@ namespace Score
             Score = 0;
             ComboMultiplyer = 0;
             MissCounter = 0;
+
+            unlockables = FindObjectOfType<Unlockables>();
 
             
         }

@@ -38,6 +38,8 @@ namespace spawnedObject {
                 pointCounter.addPoints();
                 pointCounter.addComboMutli();
                 pointCounter.removeMissCounter();
+
+                unlockables.destoryedObjectsCounter++;
             }
             
             if ((headLayer.value & ( 1 << collision.gameObject.layer)) > 0)

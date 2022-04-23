@@ -25,12 +25,16 @@ namespace spawnedObject {
         [Header("Classes")]
         public PointWall pointWall;
         public PointsCounter pointCounter;
+        public Unlockables unlockables;
 
         void Start()
         {
             rigiBod = GetComponent<Rigidbody>();
+
             currentPointValue = baseScoreValue;
+
             pointCounter = FindObjectOfType<PointsCounter>();
+            unlockables = FindObjectOfType<Unlockables>();
         }
 
         // Update is called once per frame

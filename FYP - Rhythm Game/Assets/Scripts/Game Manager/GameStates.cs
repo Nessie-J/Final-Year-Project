@@ -11,6 +11,7 @@ namespace GameManager {
         [Header("Classes")]
         public PointsCounter pointCounter;
         public PhaseTimer phaseTimer;
+        public Unlockables unlockables;
 
         [Header("Counter Information")]
         public int maxMissAmount;
@@ -27,6 +28,7 @@ namespace GameManager {
         {
             phaseTimer = FindObjectOfType<PhaseTimer>();
             pointCounter = FindObjectOfType<PointsCounter>();
+            unlockables = FindObjectOfType<Unlockables>();
 
             isPaused = false;
         }
@@ -46,6 +48,8 @@ namespace GameManager {
                 //Game Win - display high score board
                 isPaused = true;
                 Destroy(spawner);
+
+                unlockables.winCounter++;
             }
         }
 
