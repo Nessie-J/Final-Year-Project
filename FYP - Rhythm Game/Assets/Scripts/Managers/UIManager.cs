@@ -15,6 +15,9 @@ namespace UI
         public GameObject gameOverMenu;
         public GameObject highScoreMenu;
 
+        [Header("Wall")]
+        public GameObject wall;
+
 
 
         private void Start()
@@ -22,6 +25,7 @@ namespace UI
             pauseMenu.SetActive(false);
             gameOverMenu.SetActive(false);
             highScoreMenu.SetActive(false);
+            wall.SetActive(true);
         }
 
         private void Update()
@@ -31,6 +35,18 @@ namespace UI
                 pauseMenu.SetActive(true);
 
             }
+
+            else if (gameState.gameOver)
+            {
+                gameOverMenu.SetActive(true);
+            }
+
+            else if (gameState.gameWin)
+            {
+                highScoreMenu.SetActive(true);
+                wall.SetActive(false);
+            }
+               
         }
     }
 }

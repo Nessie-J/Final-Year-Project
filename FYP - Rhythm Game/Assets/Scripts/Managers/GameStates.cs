@@ -32,6 +32,8 @@ namespace GameManager {
             unlockables = FindObjectOfType<Unlockables>();
 
             isPaused = false;
+
+            Time.timeScale = 1;
         }
 
         private void Update()
@@ -40,14 +42,14 @@ namespace GameManager {
             if (pointCounter.MissCounter >= maxMissAmount)
             {
                 //GAME OVER - give options to return to main menu or quit
-                isPaused = true;
+                gameEnd();
                 Destroy(spawner);
             }
 
             if (phaseTimer.amountOfSongLeft <= 0)
             {
                 //Game Win - display high score board
-                isPaused = true;
+                gameEnd();
                 Destroy(spawner);
 
                 
@@ -70,6 +72,11 @@ namespace GameManager {
             isPaused = false;
             Time.timeScale = 1;
           
+        }
+
+        public void gameEnd()
+        {
+            Time.timeScale = 0;
         }
     }
 }
