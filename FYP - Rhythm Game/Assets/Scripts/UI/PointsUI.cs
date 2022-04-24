@@ -22,7 +22,7 @@ namespace Score
         {
             pointCounter = FindObjectOfType<PointsCounter>();
 
-            highScoreText.text = PlayerPrefs.GetInt("HighScore",0).ToString();
+            highScoreText.text = PlayerPrefs.GetInt("HighScore", pointCounter.highScore).ToString();
         }
 
         private void Update()

@@ -15,7 +15,8 @@ namespace spawnedObject {
                 pointCounter.addPoints();
                 pointCounter.removeMissCounter();
 
-                unlockables.dodgeObjectCounter++;
+                unlockables.dodgedObjectsLeft--;
+                PlayerPrefs.SetInt("dodgeUnlock", unlockables.dodgedObjectsLeft);
 
 
             }

@@ -19,14 +19,19 @@ namespace GameManager {
 
        public void LoadGame()
         {
-            SceneManager.LoadScene(Game);
-            Debug.Log("Game");
+            StartCoroutine(load());
         }
 
        public void Quit()
         {
             Application.Quit();
             Debug.Log("Quit");
+        }
+
+        IEnumerator load()
+        {
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene(Game);
         }
     }
 }

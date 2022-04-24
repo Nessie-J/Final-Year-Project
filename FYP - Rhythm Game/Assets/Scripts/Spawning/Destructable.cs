@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Score;
 
+
 namespace spawnedObject {
     public class Destructable : SpawnObjectBase
     {
@@ -39,7 +40,8 @@ namespace spawnedObject {
                 pointCounter.addComboMutli();
                 pointCounter.removeMissCounter();
 
-                unlockables.destoryedObjectsCounter++;
+                unlockables.destoryedObjectsLeft--;
+                PlayerPrefs.SetInt("destoryUnlock", unlockables.destoryedObjectsLeft);
             }
             
             if ((headLayer.value & ( 1 << collision.gameObject.layer)) > 0)

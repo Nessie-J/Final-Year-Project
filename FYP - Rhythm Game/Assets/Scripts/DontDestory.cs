@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestory : MonoBehaviour
-{
-    public static DontDestory instance;
-
-    private void Start()
+namespace permObjects {
+    public class DontDestory : MonoBehaviour
     {
-        if (instance != null)
+        public static DontDestory player;
+
+        private void Start()
         {
-            Destroy(this.gameObject);
-            return;
+            if (player != null)
+            {
+                Destroy(player.gameObject);
+                return;
+            }
+
+            player = this;
+            DontDestroyOnLoad(this.gameObject);
+
+
         }
-
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
-
-
     }
 }

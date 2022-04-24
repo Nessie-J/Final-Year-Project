@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Score;
+using unlock;
 
 namespace spawnedObject {
     public class SpawnObjectBase : MonoBehaviour
