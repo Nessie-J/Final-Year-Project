@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Score;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text highScore;
+
+    public PointsCounter pointCounter;
+
+    private void Awake()
     {
-        
+        pointCounter = FindObjectOfType<PointsCounter>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        highScore.text = PlayerPrefs.GetInt("HighScore", pointCounter.highScore).ToString();
     }
 }

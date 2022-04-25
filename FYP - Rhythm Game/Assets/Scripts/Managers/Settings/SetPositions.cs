@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using spawner;
+using permObjects;
 
 public class SetPositions : MonoBehaviour
 {
-    public GameObject playerCam;
+    public DontDestory playerCam;
     public GameObject spawner;
-    
+
+    private void Awake()
+    {
+        playerCam = FindObjectOfType<DontDestory>();
+    }
 
     private void Start()
     {

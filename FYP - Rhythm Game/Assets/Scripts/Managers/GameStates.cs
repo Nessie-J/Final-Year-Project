@@ -53,8 +53,7 @@ namespace GameManager {
                 Destroy(spawner);
 
                 
-                unlockables.amountWinsLeft--;
-                PlayerPrefs.SetInt("winUnlock", unlockables.amountWinsLeft);
+              
               
             }
         }

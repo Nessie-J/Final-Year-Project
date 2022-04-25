@@ -25,7 +25,7 @@ namespace UI
             pauseMenu.SetActive(false);
             gameOverMenu.SetActive(false);
             highScoreMenu.SetActive(false);
-            wall.SetActive(true);
+            
         }
 
         private void Update()
@@ -44,7 +44,7 @@ namespace UI
             else if (gameState.gameWin)
             {
                 highScoreMenu.SetActive(true);
-                wall.SetActive(false);
+                
             }
                
         }
