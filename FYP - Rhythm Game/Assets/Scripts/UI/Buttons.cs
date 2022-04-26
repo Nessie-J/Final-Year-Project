@@ -4,24 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour
-{
-    public LayerMask handsLayer;
-
-    public Button button;
-
-    private void Start()
+namespace UI {
+    public class Buttons : MonoBehaviour
     {
-        button = GetComponent<Button>();
-    }
+        [Header("Layer Mask")]
+        public LayerMask handsLayer;
 
-    private void OnCollisionEnter(UnityEngine.Collision collision)
-    {
-        if ((handsLayer.value & (1 << collision.gameObject.layer)) > 0)
+        [Header("Compoents")]
+        public Button button;
+        public AudioSource audioSource;
+
+        private void Start()
         {
-            button.onClick.Invoke();
+            button = GetComponent<Button>();
+            audioSource = GetComponent<AudioSource>();
         }
 
-          
+        private void OnCollisionEnter(UnityEngine.Collision collision)
+        {
+            if ((handsLayer.value & (1 << collision.gameObject.layer)) > 0)
+            {
+                button.onClick.Invoke();
+                audioSource.Play();
+            }
+
+
+        }
     }
 }

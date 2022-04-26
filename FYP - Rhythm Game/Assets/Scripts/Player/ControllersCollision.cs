@@ -5,7 +5,7 @@ using UnityEngine.XR;
 
 
 namespace controller {
-    // Focues on Haptic Reasponses
+    // Focues on Haptic Reasponses / Audio
     public class ControllersCollision : MonoBehaviour
     {
         [Header("Hand")]
@@ -19,6 +19,9 @@ namespace controller {
         [SerializeField] private float strength = 0.1f;
         [SerializeField] private float duration = 0.1f;
         [SerializeField] private bool isHapticsOn = false;
+
+        [Header("Audio")]
+        public AudioSource audioSource;
         
 
        // Layer Masks - Hands + Heads + Destructables + Obstacles
@@ -27,6 +30,7 @@ namespace controller {
         void Start()
         {
             hands = GetComponent<Hands>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -51,6 +55,7 @@ namespace controller {
             {
                 hands.devices.ForEach(c => c.SendHapticImpulse(0, strength, duration));
                 isHapticsOn = true;
+                audioSource.Play();
             }
 
             else

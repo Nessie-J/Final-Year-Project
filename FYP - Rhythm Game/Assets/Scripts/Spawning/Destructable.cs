@@ -61,8 +61,12 @@ namespace spawnedObject {
                 pointCounter.addComboMutli();
                 pointCounter.removeMissCounter();
 
-                unlockables.destoryedObjectsLeft--;
-                PlayerPrefs.SetInt("destoryUnlock", unlockables.destoryedObjectsLeft);
+                if (PlayerPrefs.GetInt("destoryUnlock", unlockables.destoryedObjectsLeft) > 0)
+                {
+                    unlockables.destoryedObjectsLeft--;
+                    PlayerPrefs.SetInt("destoryUnlock", unlockables.destoryedObjectsLeft);
+                }
+                    
 
                 Shattering();
 
@@ -82,10 +86,7 @@ namespace spawnedObject {
 
             currentPos = transform.position;
 
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                Shattering();
-            }
+           
         }
         
            

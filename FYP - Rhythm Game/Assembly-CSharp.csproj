@@ -56,41 +56,30 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\TESTING\test.cs" />
     <Compile Include="Assets\Scripts\Managers\Timers\BeatTimer.cs" />
-    <Compile Include="Assets\Scripts\UnlocksUI.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameStates.cs" />
-    <Compile Include="Assets\Scripts\PlayerSettings.cs" />
-    <Compile Include="Assets\Scripts\DontDestory.cs" />
+    <Compile Include="Assets\Scripts\UI\UnlocksUI.cs" />
+    <Compile Include="Assets\Scripts\Managers\In Game\GameStates.cs" />
+    <Compile Include="Assets\Scripts\Player\DontDestory.cs" />
     <Compile Include="Assets\Scripts\Managers\Timers\PhaseTimer.cs" />
     <Compile Include="Assets\Scripts\Spawning\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\TESTING\Button_Test.cs" />
     <Compile Include="Assets\Scripts\UI\PointsUI.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons.cs" />
-    <Compile Include="Assets\Scripts\TESTING\Collision.cs" />
     <Compile Include="Assets\Scripts\Spawning\Spawner.cs" />
     <Compile Include="Assets\Scripts\Player\ControllersCollision.cs" />
-    <Compile Include="Assets\Scripts\TESTING\Obsticals.cs" />
-    <Compile Include="Assets\Scripts\Managers\Settings\CustomControllers.cs" />
-    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
-    <Compile Include="Assets\Scripts\TESTING\Blocks.cs" />
+    <Compile Include="Assets\Scripts\Managers\In Game\UIManager.cs" />
     <Compile Include="Assets\Scripts\Player\SkinManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Player\Hands.cs" />
-    <Compile Include="Assets\Scripts\TESTING\GameTimer.cs" />
-    <Compile Include="Assets\Scripts\PointWall.cs" />
-    <Compile Include="Assets\Scripts\Unlockables.cs" />
-    <Compile Include="Assets\Scripts\UI\Customise.cs" />
-    <Compile Include="Assets\Scripts\WINTEST.cs" />
-    <Compile Include="Assets\Scripts\SceneMan.cs" />
+    <Compile Include="Assets\Scripts\Managers\Score\PointWall.cs" />
+    <Compile Include="Assets\Scripts\Managers\In Game\Unlockables.cs" />
+    <Compile Include="Assets\Scripts\Managers\Timers\PreGame.cs" />
+    <Compile Include="Assets\Scripts\Managers\Settings\Customise.cs" />
+    <Compile Include="Assets\Scripts\Managers\In Game\SceneMan.cs" />
     <Compile Include="Assets\Scripts\Spawning\Destructable.cs" />
     <Compile Include="Assets\Scripts\Spawning\SpawnObjectBase.cs" />
     <Compile Include="Assets\Scripts\Managers\Settings\SetPositions.cs" />
-    <Compile Include="Assets\Scripts\TESTING\TESTING.cs" />
     <Compile Include="Assets\Scripts\Managers\Score\PointsCounter.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Shatter.cs" />
-    <Compile Include="Assets\ShatterObject.cs" />
+    <Compile Include="Assets\Scripts\UI\HighScore_Main_Menu.cs" />
+    <Compile Include="Assets\Scripts\Managers\In Game\WinCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\excluded-font\info.txt" />

@@ -6,6 +6,8 @@ namespace customise
 {
     public class SkinManager : MonoBehaviour
     {
-      
+        public MeshRenderer meshRend;
+        public Material currentMaterial;
+
     }
 }

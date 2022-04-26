@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4014992122866777977}
   - component: {fileID: 7965865890376065453}
   - component: {fileID: 8357528259200914010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destructable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,15 +137,19 @@ MonoBehaviour:
   missWallLayer:
     serializedVersion: 2
     m_Bits: 2048
-  movementSpeed: 30
-  baseScoreValue: 0
+  movementSpeed: 32
+  baseScoreValue: 20
   currentPointValue: 0
   rigiBod: {fileID: 0}
+  myRenders: []
+  myCollider: []
   pointWall: {fileID: 0}
   pointCounter: {fileID: 0}
   unlockables: {fileID: 0}
+  phaseTimer: {fileID: 0}
   shatterObject: {fileID: 5540195861083795656, guid: f2e3129fc18c0c644b03bc138656e3ec, type: 3}
   explosionnMinForce: 10
-  explosionMaxForce: 200
+  explosionMaxForce: 100
   explosionRadius: 50
+  explosionProjection: 2
   currentPos: {x: 0, y: 0, z: 0}

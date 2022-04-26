@@ -23,8 +23,8 @@ namespace spawnedObject {
 
         [Header("Componets")]
         public Rigidbody rigiBod;
-        private Collider myCol;
-        private MeshRenderer myRender;
+        public MeshRenderer[] myRenders;
+        public Collider[] myCollider;
 
         [Header("Classes")]
         public PointWall pointWall;
@@ -36,8 +36,9 @@ namespace spawnedObject {
         protected virtual void Start()
         {
             rigiBod = GetComponent<Rigidbody>();
-            myCol = GetComponent<Collider>();
-            myRender = GetComponent<MeshRenderer>();
+            
+            myRenders = GetComponentsInChildren<MeshRenderer>();
+            myCollider = GetComponentsInChildren<Collider>();
 
             currentPointValue = baseScoreValue;
 
@@ -54,9 +55,16 @@ namespace spawnedObject {
                
                 rigiBod.AddForce(Time.deltaTime * transform.forward * movementSpeed);
 
+                foreach (Collider thiscollide in myCollider)
+                {
+                    thiscollide.enabled = true;
+                }
 
-                myCol.enabled = true;
-                myRender.enabled = true;
+                foreach (MeshRenderer meshRender in myRenders)
+                {
+                    meshRender.enabled = true;
+                }
+            
 
             }
 
@@ -66,9 +74,16 @@ namespace spawnedObject {
                 rigiBod.angularVelocity = Vector3.zero;
                 rigiBod.useGravity = false;
 
+                foreach (Collider thiscollide in myCollider)
+                {
+                    thiscollide.enabled = false;
+                }
 
-                myCol.enabled = false;
-                myRender.enabled = false;
+                foreach (MeshRenderer meshRender in myRenders)
+                {
+                    meshRender.enabled = false;
+                }
+             
 
             }
 

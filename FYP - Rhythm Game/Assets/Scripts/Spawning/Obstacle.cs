@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using unlock;
+using Score;
+using Timers;
 
 namespace spawnedObject {
     public class Obstacle : SpawnObjectBase
-    {
+    { 
+
         protected override void OnTriggerEnter(Collider other)
         {
             if ((missWallLayer.value & (1 << other.gameObject.layer)) > 0)
@@ -15,8 +19,12 @@ namespace spawnedObject {
                 pointCounter.addPoints();
                 pointCounter.removeMissCounter();
 
-                unlockables.dodgedObjectsLeft--;
-                PlayerPrefs.SetInt("dodgeUnlock", unlockables.dodgedObjectsLeft);
+                if (PlayerPrefs.GetInt("dodgeUnlock", unlockables.dodgedObjectsLeft) > 0)
+                {
+                    unlockables.dodgedObjectsLeft--;
+                    PlayerPrefs.SetInt("dodgeUnlock", unlockables.dodgedObjectsLeft);
+                }
+                   
 
 
             }
@@ -27,16 +35,15 @@ namespace spawnedObject {
             {
                 return;
             }
-        }
 
-        private void OnCollisionEnter(UnityEngine.Collision collision)
-        {
-            if ((headLayer.value & (1 << collision.gameObject.layer)) > 0 || (handsLayer.value & (1 << collision.gameObject.layer)) > 0)
+            if ((headLayer.value & (1 << other.gameObject.layer)) > 0 || (handsLayer.value & (1 << other.gameObject.layer)) > 0)
             {
                 currentPointValue = 0;
 
                 pointCounter.resetComboMulti();
             }
         }
+
+      
     }
 }

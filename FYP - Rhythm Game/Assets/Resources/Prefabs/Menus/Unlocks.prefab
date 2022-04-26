@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountWinsLeft: 1
-  destoryedObjectsLeft: 20
+  destoryedObjectsLeft: 30
   dodgedObjectsLeft: 30

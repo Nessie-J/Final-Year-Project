@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameManager;
 
 namespace Timers {
 
@@ -15,11 +16,6 @@ namespace Timers {
         [Header("Timers")]
         public float amountOfSongLeft;
         public float beatTimer;
-
-        [Header("Song Playing Bools")]
-        public bool isPlaying;
-        public bool isPaused;
-        public bool isOver;
 
         public enum Phase { attackPhase, defensePhase, comboPhase, endPhase }
         [Header("Phases")]
@@ -38,6 +34,15 @@ namespace Timers {
         [Header("Pause Bools")]
         public bool stop;
 
+        [Header("Classes")]
+        public PreGame preGameTimer;
+      
+
+        private void Awake()
+        {
+            preGameTimer = GetComponent<PreGame>();
+        }
+
 
 
         private void Start()
@@ -50,17 +55,27 @@ namespace Timers {
 
         private void Update()
         {
-            if (!stop)
-            {
-                updateTimer();
 
-                CheckPhase();
+            if(preGameTimer.isGameStart)
+            {
+                if (!stop)
+                {
+                    updateTimer();
+
+                    CheckPhase();
+                }
+
+                else
+                {
+                    return;
+                }
             }
 
             else
             {
                 return;
             }
+           
         }
 
 
@@ -73,7 +88,7 @@ namespace Timers {
                 SwitchPhase();
             }
 
-            else if (amountOfSongLeft <= comboPhaseStartTime && amountOfSongLeft >= 0)
+            else if (amountOfSongLeft <= comboPhaseStartTime && amountOfSongLeft >= endPhaseStartTime)
             {
                 currentPhase = Phase.comboPhase;
                 SwitchPhase();

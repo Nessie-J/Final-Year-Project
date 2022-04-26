@@ -4,20 +4,23 @@ using UnityEngine;
 using spawner;
 using permObjects;
 
-public class SetPositions : MonoBehaviour
-{
-    public DontDestory playerCam;
-    public GameObject spawner;
-
-    private void Awake()
+namespace settings {
+    public class SetPositions : MonoBehaviour
     {
-        playerCam = FindObjectOfType<DontDestory>();
-    }
+        [Header("Objects")]
+        public DontDestory playerCam;
+        public GameObject spawner;
 
-    private void Start()
-    {
-        spawner.transform.position = new Vector3(spawner.transform.position.x, playerCam.transform.position.y + 1, spawner.transform.position.z);
+        private void Awake()
+        {
+            playerCam = FindObjectOfType<DontDestory>();
+        }
 
-        
+        private void Start()
+        {
+            spawner.transform.position = new Vector3(spawner.transform.position.x, playerCam.transform.position.y + 1, spawner.transform.position.z);
+
+
+        }
     }
 }

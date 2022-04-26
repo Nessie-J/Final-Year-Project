@@ -16,11 +16,9 @@ namespace spawner
      
 
         [Header("Spawn Points")]
-        public Transform[] blockSpawnPoint;
+        public Transform[] destructableSpawnPoints;
         public Transform[] obsticalSpawnPoint;
-        public Transform[] comboSpawnPoint;
-
-      
+     
 
         [Header("Timers")]
         public PhaseTimer phaseTimer;
@@ -82,7 +80,7 @@ namespace spawner
               
             }
 
-            else
+            else if (!phaseTimer.isAttackPhase && !phaseTimer.isDefensePhase && !phaseTimer.isComboPhase)
             {
                 currentItemSpawning = spawnItems.none;
                 switchItem();
@@ -122,9 +120,9 @@ namespace spawner
         {
             if (beatTimer.attackBeatTimer > beatTimer.attackBeat)
             {
-                GameObject block = Instantiate(destructables[Random.Range(0, destructables.Length)], blockSpawnPoint[Random.Range(0, blockSpawnPoint.Length)]);
-                block.transform.localPosition = Vector3.zero;
-              //  Destroy(block, objectDestoryTimer);
+                GameObject destructableObj = Instantiate(destructables[Random.Range(0, destructables.Length)], destructableSpawnPoints[Random.Range(0, destructableSpawnPoints.Length)]);
+                destructableObj.transform.localPosition = Vector3.zero;
+              //  Destroy(destructableObj, objectDestoryTimer);
                 beatTimer.attackBeatTimer -= beatTimer.attackBeat;
             }
         }
