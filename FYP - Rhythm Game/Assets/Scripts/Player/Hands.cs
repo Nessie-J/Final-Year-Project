@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
+using GameManager;
 
 namespace controller
 {
@@ -11,7 +12,15 @@ namespace controller
         public InputDevice device;
         public InputDeviceCharacteristics controllerCharacteristics;
         public List<InputDevice> devices = new List<InputDevice>();
+        private bool triggerValue;
 
+        [Header("Classes")]
+        public GameStates gameState;
+
+        private void Start()
+        {
+            gameState = FindObjectOfType<GameStates>();
+        }
 
         // Update is called once per frame
         void Update()
@@ -23,6 +32,9 @@ namespace controller
         {
 
             InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+
+            var primeButton = CommonUsages.primaryButton;
+            var SeconButton = CommonUsages.secondaryButton;
 
             foreach (var device in devices)
             {
@@ -40,9 +52,38 @@ namespace controller
                     transform.localRotation = orientation;
                 }
 
+                var controllerInput1 = device.TryGetFeatureValue(primeButton, out triggerValue) && triggerValue;
+
+                if(controllerInput1)
+                {
+                   
+                    if (gameState != null)
+                    {
+                        if (!gameState.isPaused)
+                        {
+                            gameState.pauseGame();
+                            Debug.Log("pause");
+                        }
+                    }
+                }
+
+                var controllerInput2 = device.TryGetFeatureValue(SeconButton, out triggerValue) && triggerValue;
+
+                if (controllerInput2)
+                {
+                    if (gameState != null)
+                    {
+                        if (gameState.isPaused)
+                        {
+                            gameState.resumeGame();
+                        }
+                    }
+                }
 
             }
         }
+
+        
 
         
 

@@ -26,8 +26,8 @@ namespace spawner
         public PhaseTimer phaseTimer;
         public BeatTimer beatTimer;
 
-     [Header("Destroy")]
-        public float objectDestoryTimer = 200;
+        //[Header("Destroy")]
+       // public float objectDestoryTimer = 200;
 
         
 
@@ -45,7 +45,15 @@ namespace spawner
 
         private void Update()
         {
-            CheckPhase();
+            if (!phaseTimer.stop)
+            {
+                CheckPhase();
+            }
+
+            else
+            {
+                return;
+            }
         }
 
 

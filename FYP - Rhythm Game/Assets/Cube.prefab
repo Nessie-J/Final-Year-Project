@@ -143,3 +143,4 @@ MonoBehaviour:
   rigiBod: {fileID: 0}
   pointWall: {fileID: 0}
   pointCounter: {fileID: 0}
+  unlockables: {fileID: 0}

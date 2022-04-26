@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameManager;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -11,9 +12,11 @@ namespace UI
         public GameStates gameState;
 
         [Header("Menus")]
-        public GameObject pauseMenu;
-        public GameObject gameOverMenu;
-        public GameObject highScoreMenu;
+        public GameObject[] pauseMenu;
+        public GameObject[] gameOverMenu;
+        public GameObject[] gameWinMenu;
+        public GameObject scoreDisplay;
+        public GameObject highScoreDisplay;
 
         [Header("Wall")]
         public GameObject wall;
@@ -22,31 +25,81 @@ namespace UI
 
         private void Start()
         {
-            pauseMenu.SetActive(false);
-            gameOverMenu.SetActive(false);
-            highScoreMenu.SetActive(false);
-            
+            BaseSetting();
         }
 
         private void Update()
         {
-            if (gameState.isPaused)
+
+          if (!gameState.isPaused)
+           {
+                foreach (GameObject PauseMen in pauseMenu)
+                {
+                    PauseMen.SetActive(false);
+                }
+            }
+
+            else if (gameState.isPaused)
             {
-                pauseMenu.SetActive(true);
+                foreach (GameObject PauseMen in pauseMenu)
+                {
+                    PauseMen.SetActive(true);
+                }
 
             }
 
+         
             else if (gameState.gameOver)
             {
-                gameOverMenu.SetActive(true);
+
+                foreach (GameObject gameOverMen in gameOverMenu)
+                {
+                    gameOverMen.SetActive(true);
+                    turnOffScoreDisplay();
+                }
+               
+                
             }
 
             else if (gameState.gameWin)
             {
-                highScoreMenu.SetActive(true);
+                foreach (GameObject gameWinMen in gameWinMenu)
+                {
+                    gameWinMen.SetActive(true);
+                    turnOffScoreDisplay();
+                }
                 
             }
                
+        }
+
+
+        void turnOffScoreDisplay()
+        {
+            scoreDisplay.SetActive(false);
+        }
+
+        void BaseSetting()
+        {
+            foreach (GameObject PauseMen in pauseMenu)
+            {
+                PauseMen.SetActive(false);
+            }
+
+
+            foreach (GameObject gameOverMen in gameOverMenu)
+            {
+                gameOverMen.SetActive(false);
+            }
+
+            foreach (GameObject gameWinMen in gameWinMenu)
+            {
+                gameWinMen.SetActive(false);
+            }
+
+            scoreDisplay.SetActive(true);
+
+            highScoreDisplay.SetActive(true);
         }
     }
 }

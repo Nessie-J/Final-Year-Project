@@ -52,8 +52,6 @@ namespace GameManager {
                 gameEnd();
                 Destroy(spawner);
 
-                
-              
               
             }
         }
@@ -62,20 +60,20 @@ namespace GameManager {
         public void pauseGame()
         {
             isPaused = true;
-            Time.timeScale = 0;
+            phaseTimer.stop = true;
             
         }
 
         public void resumeGame()
         {
             isPaused = false;
-            Time.timeScale = 1;
+            phaseTimer.stop = false;
           
         }
 
         public void gameEnd()
         {
-            Time.timeScale = 0;
+            phaseTimer.stop = true;
         }
     }
 }

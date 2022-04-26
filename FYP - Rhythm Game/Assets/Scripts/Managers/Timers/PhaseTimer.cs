@@ -35,6 +35,9 @@ namespace Timers {
         public bool isDefensePhase;
         public bool isComboPhase;
 
+        [Header("Pause Bools")]
+        public bool stop;
+
 
 
         private void Start()
@@ -47,9 +50,17 @@ namespace Timers {
 
         private void Update()
         {
-            updateTimer();
+            if (!stop)
+            {
+                updateTimer();
 
-            CheckPhase();
+                CheckPhase();
+            }
+
+            else
+            {
+                return;
+            }
         }
 
 

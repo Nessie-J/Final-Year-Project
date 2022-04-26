@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Score;
+using Timers;
 using unlock;
 
 namespace spawnedObject {
@@ -22,26 +23,58 @@ namespace spawnedObject {
 
         [Header("Componets")]
         public Rigidbody rigiBod;
+        private Collider myCol;
+        private MeshRenderer myRender;
 
         [Header("Classes")]
         public PointWall pointWall;
         public PointsCounter pointCounter;
         public Unlockables unlockables;
+        public PhaseTimer phaseTimer;
 
-        void Start()
+
+        protected virtual void Start()
         {
             rigiBod = GetComponent<Rigidbody>();
+            myCol = GetComponent<Collider>();
+            myRender = GetComponent<MeshRenderer>();
 
             currentPointValue = baseScoreValue;
 
+            phaseTimer = FindObjectOfType<PhaseTimer>();
             pointCounter = FindObjectOfType<PointsCounter>();
             unlockables = FindObjectOfType<Unlockables>();
         }
 
         // Update is called once per frame
-        void Update()
+        protected virtual void Update()
         {
-            rigiBod.AddForce(Time.deltaTime * transform.forward * movementSpeed);
+            if (!phaseTimer.stop)
+            {
+               
+                rigiBod.AddForce(Time.deltaTime * transform.forward * movementSpeed);
+
+
+                myCol.enabled = true;
+                myRender.enabled = true;
+
+            }
+
+            else
+            {
+                rigiBod.velocity = Vector3.zero;
+                rigiBod.angularVelocity = Vector3.zero;
+                rigiBod.useGravity = false;
+
+
+                myCol.enabled = false;
+                myRender.enabled = false;
+
+            }
+
+            
+
+            
         }
 
 
