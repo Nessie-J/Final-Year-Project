@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 1c0b07746b3e09b4a82e620d57c7909a, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0501ffc6b157b914b9853e0b8522e579, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 26c30ce01e963824195d58b8d1bbb34a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.74899983, y: 2.5887861}
+  m_AnchoredPosition: {x: 0.787, y: 2.5887861}
   m_SizeDelta: {x: 353.72, y: 115.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90329131
@@ -2346,6 +2346,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 204094971}
+    - target: {fileID: 8984461539397895763, guid: 06cdbb40c342ffb459505974e261957e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06cdbb40c342ffb459505974e261957e, type: 3}
 --- !u!4 &1276934986 stripped
@@ -4087,7 +4091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.749, y: 2.5887861}
+  m_AnchoredPosition: {x: 0.791, y: 2.5887861}
   m_SizeDelta: {x: 353.72, y: 115.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712357616
@@ -5577,7 +5581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7322687694388050740, guid: 3de3d16abd9294349bebcc2bc4f251ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.11
+      value: -0.036
       objectReference: {fileID: 0}
     - target: {fileID: 7322687694388050740, guid: 3de3d16abd9294349bebcc2bc4f251ee, type: 3}
       propertyPath: m_LocalPosition.y

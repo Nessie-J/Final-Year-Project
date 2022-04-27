@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4b0a54067ade144ba427201f1be5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRend: {fileID: 0}
+  currentMaterial: {fileID: 0}
 --- !u!1 &7322687693825598342
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,3 +953,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4b0a54067ade144ba427201f1be5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRend: {fileID: 0}
+  currentMaterial: {fileID: 0}

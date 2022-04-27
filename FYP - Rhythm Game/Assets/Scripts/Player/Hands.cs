@@ -19,13 +19,19 @@ namespace controller
 
         private void Start()
         {
-            gameState = FindObjectOfType<GameStates>();
+           
         }
 
         // Update is called once per frame
         void Update()
         {
             GetDevices();
+
+            if(gameState == null)
+            {
+                gameState = FindObjectOfType<GameStates>();
+            }
+            
         }
 
        public void GetDevices()

@@ -11,7 +11,7 @@ namespace permObjects {
         {
             if (player != null)
             {
-                Destroy(player.gameObject);
+                Destroy(this.gameObject);
                 return;
             }
 
